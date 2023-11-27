@@ -1,12 +1,20 @@
 import time
 import pandas as pd
-import numpy as np
 
 CITY_DATA = {
     'chicago': 'chicago.csv',
     'new york': 'new_york_city.csv',
     'washington': 'washington.csv'
 }
+
+
+def print_line(length=40):
+    """Print line with length is parameter
+
+    Args:
+        length (int, optional): length of line. Defaults to 40.
+    """
+    print('-'*length)
 
 
 def verifyInput(msg, ans):
@@ -38,7 +46,7 @@ def get_filters():
                         or "all" to apply no day filter
                         and "all" must be default
     """
-    print('-'*40)
+    print_line()
     print('\n\n\nHello! Let\'s explore some US bikeshare data!')
     # get user input for city (chicago, new york city, washington).
     # HINT: Use a while loop to handle invalid inputs
@@ -74,7 +82,7 @@ Type 'all' to apply no day filter.""",
              'thursday', 'friday', 'saturday', 'sunday']
         )
 
-    print('-'*40)
+    print_line()
     return city, month, day
 
 
@@ -144,7 +152,7 @@ def time_stats(df):
     print('Most Popular Start Hour:', popular_hour)
 
     print("\nThis took %s seconds." % (time.time() - start_time))
-    print('-'*40)
+    print_line()
 
 
 def station_stats(df):
@@ -168,7 +176,7 @@ def station_stats(df):
           ' -> '.join(popular_fre_comb.split("~")))
 
     print("\nThis took %s seconds." % (time.time() - start_time))
-    print('-'*40)
+    print_line()
 
 
 def trip_duration_stats(df):
@@ -186,7 +194,7 @@ def trip_duration_stats(df):
     print("Average travel time :", mean_travel)
 
     print("\nThis took %s seconds." % (time.time() - start_time))
-    print('-'*40)
+    print_line()
 
 
 def user_stats(df):
@@ -226,7 +234,7 @@ def user_stats(df):
         print("Most Common Year Of Birth:", most_common)
 
     print("\nThis took %s seconds." % (time.time() - start_time))
-    print('-'*40)
+    print_line()
 
 
 def display_data(df, row=5):
