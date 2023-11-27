@@ -9,6 +9,11 @@ CITY_DATA = {
 
 
 def print_line(length=40):
+    """Print line with length is parameter
+
+    Args:
+        length (int, optional): length of line. Defaults to 40.
+    """
     print('-'*length)
 
 
