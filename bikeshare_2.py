@@ -36,6 +36,7 @@ def get_filters():
                         and "all" must be default
         (str) day - name of the day of week to filter by,
                         or "all" to apply no day filter
+                        and "all" must be default
     """
     print('-'*40)
     print('\n\n\nHello! Let\'s explore some US bikeshare data!')
